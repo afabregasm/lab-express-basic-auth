@@ -13,10 +13,16 @@
     <nav>
       <ul>
         <li id="to-left">
-          <p><a href="/"> Lab Express Basic </a></p>
+          <p><a href="/">Lab Express Basic</a></p>
         </li>
         <li id="to-right">
+          {{#if userInSession}}
+          <a href="/logout">Logout</a>
+          {{else}}
+          <a href="/profile">Check Middleware</a>
+          <a href="/login">Login</a> 
           <a href="/signup">Signup</a>
+          {{/if}}
         </li>
       </ul>
     </nav>
